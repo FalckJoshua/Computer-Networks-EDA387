@@ -84,7 +84,7 @@ int main( int aArgc, char* aArgv[] )
 	s = getaddrinfo(aArgv[1], NULL, &hints, &result);
 
 	if (s != 0) {
-		fprintf(stderr, "getaddrinf: %s\n", gai_strerror(s));
+		fprintf(stderr, "getaddrinfo: %s\n", gai_strerror(s));
 		exit(EXIT_FAILURE);
 	}
 
