@@ -91,8 +91,9 @@ int main( int aArgc, char* aArgv[] )
 	char str[INET_ADDRSTRLEN];
 	
 	for (rp = result; rp != NULL; rp = rp -> ai_next) {
-		inet_ntop(AF_INET, rp, str, INET_ADDRSTRLEN);
-		printf("%s\n", str);
+		struct sockaddr_in *ipaddr = (struct sockaddr_in *)rp -> ai_addr; 
+		inet_ntop(AF_INET, &ipaddr->sin_addr, str, INET_ADDRSTRLEN);
+				printf("%s\n", str);
 	}
 
 	freeaddrinfo(result);
