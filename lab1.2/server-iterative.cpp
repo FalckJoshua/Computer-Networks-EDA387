@@ -59,7 +59,7 @@ const int kServerBacklog = 8;
 // Size of the buffer used to transfer data. A single read from the socket 
 // may return at most this much data, and consequently, a single send may
 // send at most this much data.
-const size_t kTransferBufferSize = 64;
+const size_t kTransferBufferSize = 4;
 
 //--    constants           ///{{{1///////////////////////////////////////////
 
